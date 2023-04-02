@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		23D368DD29D9D97A0086FB79 /* TabBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D368DC29D9D97A0086FB79 /* TabBarApp.swift */; };
-		23D368DF29D9D97A0086FB79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D368DE29D9D97A0086FB79 /* ContentView.swift */; };
 		23D368E129D9D97B0086FB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D368E029D9D97B0086FB79 /* Assets.xcassets */; };
 		23D368E429D9D97B0086FB79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D368E329D9D97B0086FB79 /* Preview Assets.xcassets */; };
 		23D368EE29D9D97B0086FB79 /* TabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D368ED29D9D97B0086FB79 /* TabBarTests.swift */; };
 		23D368F829D9D97B0086FB79 /* TabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D368F729D9D97B0086FB79 /* TabBarUITests.swift */; };
 		23D368FA29D9D97B0086FB79 /* TabBarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D368F929D9D97B0086FB79 /* TabBarUITestsLaunchTests.swift */; };
+		23D3690929D9DA660086FB79 /* MainTabScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3690829D9DA660086FB79 /* MainTabScene.swift */; };
+		23D3690C29D9DAAC0086FB79 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 23D3690B29D9DAAC0086FB79 /* ComposableArchitecture */; };
+		23D3691029D9DB210086FB79 /* MockTabScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3690F29D9DB210086FB79 /* MockTabScene.swift */; };
+		23D3691829D9DDD70086FB79 /* MockTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3691729D9DDD70086FB79 /* MockTabView.swift */; };
+		23D3691A29D9DF690086FB79 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3691929D9DF690086FB79 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		23D368D929D9D97A0086FB79 /* TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D368DC29D9D97A0086FB79 /* TabBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarApp.swift; sourceTree = "<group>"; };
-		23D368DE29D9D97A0086FB79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23D368E029D9D97B0086FB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23D368E329D9D97B0086FB79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23D368E929D9D97B0086FB79 /* TabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,10 @@
 		23D368F329D9D97B0086FB79 /* TabBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D368F729D9D97B0086FB79 /* TabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarUITests.swift; sourceTree = "<group>"; };
 		23D368F929D9D97B0086FB79 /* TabBarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23D3690829D9DA660086FB79 /* MainTabScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabScene.swift; sourceTree = "<group>"; };
+		23D3690F29D9DB210086FB79 /* MockTabScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTabScene.swift; sourceTree = "<group>"; };
+		23D3691729D9DDD70086FB79 /* MockTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTabView.swift; sourceTree = "<group>"; };
+		23D3691929D9DF690086FB79 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D3690C29D9DAAC0086FB79 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +102,8 @@
 		23D368DB29D9D97A0086FB79 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				23D3690729D9DA0A0086FB79 /* MainTabScene */,
 				23D368DC29D9D97A0086FB79 /* TabBarApp.swift */,
-				23D368DE29D9D97A0086FB79 /* ContentView.swift */,
 				23D368E029D9D97B0086FB79 /* Assets.xcassets */,
 				23D368E229D9D97B0086FB79 /* Preview Content */,
 			);
@@ -127,6 +135,25 @@
 			path = TabBarUITests;
 			sourceTree = "<group>";
 		};
+		23D3690729D9DA0A0086FB79 /* MainTabScene */ = {
+			isa = PBXGroup;
+			children = (
+				23D3690829D9DA660086FB79 /* MainTabScene.swift */,
+				23D3691929D9DF690086FB79 /* MainTabView.swift */,
+				23D3690D29D9DB110086FB79 /* Tab */,
+			);
+			path = MainTabScene;
+			sourceTree = "<group>";
+		};
+		23D3690D29D9DB110086FB79 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				23D3690F29D9DB210086FB79 /* MockTabScene.swift */,
+				23D3691729D9DDD70086FB79 /* MockTabView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +170,9 @@
 			dependencies = (
 			);
 			name = TabBar;
+			packageProductDependencies = (
+				23D3690B29D9DAAC0086FB79 /* ComposableArchitecture */,
+			);
 			productName = TabBar;
 			productReference = 23D368D929D9D97A0086FB79 /* TabBar.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 23D368D029D9D97A0086FB79;
+			packageReferences = (
+				23D3690A29D9DAAC0086FB79 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 23D368DA29D9D97A0086FB79 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23D368DF29D9D97A0086FB79 /* ContentView.swift in Sources */,
+				23D3691829D9DDD70086FB79 /* MockTabView.swift in Sources */,
+				23D3691029D9DB210086FB79 /* MockTabScene.swift in Sources */,
 				23D368DD29D9D97A0086FB79 /* TabBarApp.swift in Sources */,
+				23D3690929D9DA660086FB79 /* MainTabScene.swift in Sources */,
+				23D3691A29D9DF690086FB79 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		23D3690A29D9DAAC0086FB79 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 0.52.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		23D3690B29D9DAAC0086FB79 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23D3690A29D9DAAC0086FB79 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 23D368D129D9D97A0086FB79 /* Project object */;
 }
